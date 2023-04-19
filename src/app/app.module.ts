@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { NgxNavkitModule } from 'ngx-navkit';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgxNavkitModule],
+  imports: [BrowserModule, NgxNavkitModule, RouterModule.forRoot([])],
   providers: [],
   bootstrap: [AppComponent],
 })

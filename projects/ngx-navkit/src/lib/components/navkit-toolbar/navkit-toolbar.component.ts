@@ -6,13 +6,15 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class NavkitToolbarComponent implements OnInit {
-  @Input() color: string = '#000';
-  @Input() body: string = 'Hello world';
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   @HostBinding('class') get HeadingClass() {
     return 'navkit-toolbar';
   }
+
+  @HostBinding('style.height.px')
+  @Input()
+  height: number = 60;
 }

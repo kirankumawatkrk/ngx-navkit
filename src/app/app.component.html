@@ -1,6 +1,10 @@
 <navkit-container>
-  <navkit-sidenav [mode]="'side'"></navkit-sidenav>
+  <navkit-sidenav
+    [mode]="'side'"
+    [width]="360"
+    [navItems]="navItems"
+  ></navkit-sidenav>
   <navkit-content>
-    <navkit-toolbar></navkit-toolbar>
+    <navkit-toolbar [height]="80"></navkit-toolbar>
   </navkit-content>
 </navkit-container>

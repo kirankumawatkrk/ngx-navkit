@@ -1,3 +1,6 @@
-<div class="navkit-sidenav-inner" [ngClass]="mode">
-    <ng-content></ng-content>
+<div class="navkit-sidenav-inner" [ngClass]="mode" [style.width.px]="width">
+  <ng-content></ng-content>
+  <div *ngFor="let nav of navItems">
+    <a [routerLink]="nav.route">{{ nav.name }}</a>
+  </div>
 </div>
