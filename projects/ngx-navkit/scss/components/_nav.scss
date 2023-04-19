@@ -1,0 +1,26 @@
+.translucent-nav {
+  padding: 12px;
+  padding-bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-image: linear-gradient(#e2e8f0, #ffffff00);
+  z-index: 9999;
+}
+.navbar {
+  border-radius: 0.75rem;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .nav-logo {
+    height: 45px;
+  }
+  .left-block {
+    .logo-block {
+      width: 216px;
+      border-right: 1px solid #ffffff14;
+    }
+  }
+  .right-block {
+    display: flex;
+    width: auto;
+  }
+}

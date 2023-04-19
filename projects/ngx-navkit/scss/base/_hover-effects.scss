@@ -1,0 +1,7 @@
+.elevation-z {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0 20px 25px -5px #0000000b;
+    transform: scale(1.05, 1.05);
+  }
+}

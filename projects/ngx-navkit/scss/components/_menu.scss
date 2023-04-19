@@ -1,0 +1,35 @@
+.menu-container {
+  border-radius: 0.375rem;
+  position: absolute;
+  z-index: 999;
+  right: 10px;
+  top: 15px;
+  transform-origin: top right;
+  box-shadow: 0 3px 10px #00000017;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  .menu-block {
+    width: max-content;
+    min-width: 8rem;
+    height: 100%;
+    padding: 8px;
+    background: #f3f3f3;
+    .menu-item {
+      border-radius: 0.375rem;
+      transition: background 0.3s ease;
+      .menu-item-content {
+        padding: 6px 8px;
+        font-weight: 600;
+        color: #020202;
+      }
+      &:active {
+        background: transparentize(#f3f3f3, 0);
+      }
+    }
+  }
+}
+
+.delete-btn {
+  color: #ff4848 !important;
+}

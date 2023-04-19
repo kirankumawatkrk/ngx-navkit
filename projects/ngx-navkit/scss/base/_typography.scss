@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+/*Bootstrap icons*/
+.bi.fitted {
+  -webkit-text-stroke: 0.3px;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  vertical-align: unset;
+  position: relative;
+  &::before {
+    position: absolute;
+  }
+}
+.bi.bi-2x {
+  font-size: 20px;
+  -webkit-text-stroke: 0.3px;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
+}
+.bi.bi-3x {
+  font-size: 24px;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  min-height: 24px;
+  max-height: 24px;
+}
+.bi.bi-4x {
+  font-size: 28px;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  min-height: 28px;
+  max-height: 28px;
+}

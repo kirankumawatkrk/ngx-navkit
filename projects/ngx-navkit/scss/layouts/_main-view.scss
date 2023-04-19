@@ -1,0 +1,11 @@
+.display-block {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  position: relative;
+  .main-view {
+    flex: 1 1 auto;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
