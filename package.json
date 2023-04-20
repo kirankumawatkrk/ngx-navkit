@@ -1,6 +1,31 @@
 {
   "name": "ngx-navkit-test",
   "version": "0.0.0",
+  "description": "A simple angular library to create admin dashboard and website toolbar sidenav view",
+  "author": {
+    "name": "Kiran Kumawat",
+    "email": "kirankumawatkrk@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirankumawatkrk/ngx-navkit"
+  },
+  "bugs": {
+    "url": "https://github.com/kirankumawatkrk/ngx-navkit/issues"
+  },
+  "homepage": "https://github.com/kirankumawatkrk/ngx-navkit",
+  "keywords": [
+    "Angular",
+    "Typescript",
+    "Javascript",
+    "Library",
+    "Navkit"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "15.2.8",
+    "@angular/core": "15.2.8"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

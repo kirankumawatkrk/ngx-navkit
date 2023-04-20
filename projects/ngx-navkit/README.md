@@ -1,24 +1,29 @@
 # NgxNavkit
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0. This library is used for creating simple angular navigation views.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name --project ngx-navkit` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-navkit`.
-> Note: Don't forget to add `--project ngx-navkit` or else it will be added to the default project in your `angular.json` file. 
-
-## Build
-
-Run `ng build ngx-navkit` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-navkit`, go to the dist folder `cd dist/ngx-navkit` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-navkit` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Run `npm install ngx-navkit` to generate a new component.
+2. Add styles.
+--*`angular.json`:
+---`"styles": [
+        "node_modules/ngx-navkit/scss/styles.scss"
+    ]`
+3. Add components to the view
+--- `<navkit-container>
+  <navkit-sidenav
+    [mode]="'side'"
+    [width]="300"
+    [navItems]="navItems"
+  ></navkit-sidenav>
+  <navkit-content>
+    <navkit-toolbar
+      [height]="80"
+      [sidenavToggle]="true"
+      [sticky]="true"
+    ></navkit-toolbar>
+  </navkit-content>
+</navkit-container>`
+---Here the components `navkit-container` holds the sidenav and content components in a flexbox. The `navkit-toolbar` component can be outside the container. 
+---Add your components to the view in sidenav and content components.
