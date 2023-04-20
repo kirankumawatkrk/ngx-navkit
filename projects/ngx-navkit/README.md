@@ -7,11 +7,11 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 1. Run `npm install ngx-navkit` to generate a new component.
 2. Add styles.
 --*`angular.json`:
----`"styles": [
+`"styles": [
         "node_modules/ngx-navkit/scss/styles.scss"
     ]`
 3. Add components to the view
---- `<navkit-container>
+`<navkit-container>
   <navkit-sidenav
     [mode]="'side'"
     [width]="300"
