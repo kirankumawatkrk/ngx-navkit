@@ -6,7 +6,6 @@ import { NavkitContentComponent } from './components/navkit-content/navkit-conte
 import { NavkitSidenavComponent } from './components/navkit-sidenav/navkit-sidenav.component';
 import { NavkitToolbarComponent } from './components/navkit-toolbar/navkit-toolbar.component';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import { RouterModule } from '@angular/router';
     NavkitSidenavComponent,
     NavkitToolbarComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule],
   exports: [
     NavkitContainerComponent,
     NavkitContentComponent,

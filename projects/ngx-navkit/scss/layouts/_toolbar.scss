@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  &:has(.sticky){
-    position: sticky;
-    top: 0;
-  }
+}
+.navkit-toolbar.sticky{
+  position: sticky;
+  top: 0;
 }

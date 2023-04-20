@@ -29,4 +29,8 @@ export class NavkitSidenavComponent implements OnInit {
   @HostBinding('class') get HeadingClass() {
     return 'navkit-sidenav';
   }
+
+  toggleSidenav() {
+    this.navkitService.toggleSidenav();
+  }
 }

@@ -1,10 +1,8 @@
+<div class="overlay" (click)="toggleSidenav()"></div>
 <div
   class="navkit-sidenav-inner"
   [ngClass]="(navkitService.openSidenav | async) ? 'over' : 'side'"
   [style.width.px]="width"
 >
   <ng-content></ng-content>
-  <div *ngFor="let nav of navItems">
-    <a [routerLink]="nav.route">{{ nav.name }}</a>
-  </div>
 </div>

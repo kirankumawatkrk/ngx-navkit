@@ -3,6 +3,7 @@ import {
   ChangeDetectorRef,
   Component,
   HostBinding,
+  HostListener,
   OnInit,
 } from '@angular/core';
 import { take } from 'rxjs';
@@ -24,7 +25,7 @@ export class NavkitContentComponent implements OnInit {
 
   ngAfterContentChecked(): void {
     this.navkitService.sideNavWidth.pipe(take(1)).subscribe((width) => {
-      if (width) {
+      if (width && window.innerWidth > 992) {
         this.navkitService.openSidenav.pipe(take(1)).subscribe((value) => {
           if (value) {
             this.width = `100%`;
@@ -34,6 +35,23 @@ export class NavkitContentComponent implements OnInit {
           this.width = `calc(100% - ${width}px)`;
           this.cdRef.detectChanges();
         });
+      } else {
+        this.width = `100%`;
+        this.cdRef.detectChanges();
+      }
+    });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: Event) {
+    this.navkitService.sideNavWidth.pipe(take(1)).subscribe((width) => {
+      this.navkitService.toggleSidenav();
+      if (width && window.innerWidth > 992) {
+        this.width = `calc(100% - ${width}px)`;
+        this.cdRef.detectChanges();
+      } else {
+        this.width = `100%`;
+        this.cdRef.detectChanges();
       }
     });
   }

@@ -1,11 +1,15 @@
 <navkit-container>
   <navkit-sidenav
     [mode]="'side'"
-    [width]="200"
+    [width]="300"
     [navItems]="navItems"
   ></navkit-sidenav>
   <navkit-content>
-    <navkit-toolbar [height]="80" [sidenavToggle]="true"></navkit-toolbar>
+    <navkit-toolbar
+      [height]="80"
+      [sidenavToggle]="true"
+      [sticky]="true"
+    ></navkit-toolbar>
     <div>
       <p>
         Lorem ipsum dolor sit amet. Non voluptas dolor est consequatur iste qui

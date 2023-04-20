@@ -17,6 +17,13 @@ export class NavkitToolbarComponent implements OnInit {
   }
 
   @Input()
+  sticky = false;
+
+  @HostBinding('class.sticky') get toolbarSticky() {
+    return this.sticky;
+  }
+
+  @Input()
   sidenavToggle: boolean = false;
 
   @HostBinding('style.height.px')
@@ -25,7 +32,6 @@ export class NavkitToolbarComponent implements OnInit {
   height: number = 60;
 
   toggleSidenav() {
-    //this.open = !this.open;
     this.navkitService.toggleSidenav();
   }
 }
