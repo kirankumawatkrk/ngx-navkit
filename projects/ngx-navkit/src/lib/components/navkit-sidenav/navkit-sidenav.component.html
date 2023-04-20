@@ -1,3 +1,8 @@
-<div class="navkit-sidenav-inner" [ngClass]="mode">
-    <ng-content></ng-content>
+<div class="overlay" (click)="toggleSidenav()"></div>
+<div
+  class="navkit-sidenav-inner"
+  [ngClass]="(navkitService.openSidenav | async) ? 'over' : 'side'"
+  [style.width.px]="width"
+>
+  <ng-content></ng-content>
 </div>

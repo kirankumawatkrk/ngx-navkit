@@ -1,4 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { NgxNavkitService } from '../../ngx-navkit.service';
 
 @Component({
   selector: 'navkit-toolbar',
@@ -6,13 +7,31 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
   styleUrls: [],
 })
 export class NavkitToolbarComponent implements OnInit {
-  @Input() color: string = '#000';
-  @Input() body: string = 'Hello world';
-  constructor() { }
+  open = false;
+  constructor(protected navkitService: NgxNavkitService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   @HostBinding('class') get HeadingClass() {
     return 'navkit-toolbar';
+  }
+
+  @Input()
+  sticky = false;
+
+  @HostBinding('class.sticky') get toolbarSticky() {
+    return this.sticky;
+  }
+
+  @Input()
+  sidenavToggle: boolean = false;
+
+  @HostBinding('style.height.px')
+  @HostBinding('style.minHeight.px')
+  @Input()
+  height: number = 60;
+
+  toggleSidenav() {
+    this.navkitService.toggleSidenav();
   }
 }

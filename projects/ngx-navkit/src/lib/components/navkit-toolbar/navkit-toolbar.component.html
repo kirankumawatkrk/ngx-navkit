@@ -1,6 +1,6 @@
-<div class="logo-block d-flex align-items-center">
-  <img class="nav-logo rounding" src="" alt="App Logo" />
+<div *ngIf="sidenavToggle" class="navkit-hamburger" (click)="toggleSidenav()">
+  <span></span>
+  <span></span>
+  <span></span>
 </div>
-<div class="end-block d-flex align-items-center">
-  <ng-content></ng-content>
-</div>
+<ng-content></ng-content>
