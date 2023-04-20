@@ -1,7 +1,32 @@
-.navkit-sidenav{
+.navkit-sidenav {
   height: 100%;
   border-right: 1px solid #a4a4a4;
-  .navkit-sidenav-inner{
+  background-color: #ffffff;
+  position: fixed;
+  top: 0px;
+  transition: left .3s ease;
+
+  .navkit-sidenav-inner {
     height: 100%;
+  }
+
+  &:has(.side) {
+    left: 0px;
+  }
+
+  &:has(.over) {
+    left: -100%;
+  }
+}
+
+@media (max-width:992px) {
+  .navkit-sidenav {
+    &:has(.side) {
+      left: -100%;
+    }
+
+    &:has(.over) {
+      left: 0px;
+    }
   }
 }
