@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/kirankumawatkrk/ngx-navkit/compare/v0.1.1...v0.1.2) (2023-04-24)
+
+
+### Bug Fixes
+
+* sidenav toggle changes ([ff0d9ac](https://github.com/kirankumawatkrk/ngx-navkit/commit/ff0d9ac21b656da783b97d9ca5ca748b285ebf05))
+
+### [0.1.2](https://github.com/kirankumawatkrk/ngx-navkit/compare/v0.1.1...v0.1.2) (2023-04-24)
+
+
+### Bug Fixes
+
+* sidenav toggle changes ([ff0d9ac](https://github.com/kirankumawatkrk/ngx-navkit/commit/ff0d9ac21b656da783b97d9ca5ca748b285ebf05))
+
 ### [0.1.1](https://github.com/kirankumawatkrk/ngx-navkit/compare/v0.0.5...v0.1.1) (2023-04-21)
 
 ### [0.0.5](https://github.com/kirankumawatkrk/ngx-navkit/compare/v0.1.0...v0.0.5) (2023-04-21)
