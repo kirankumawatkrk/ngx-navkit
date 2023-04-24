@@ -45,11 +45,16 @@ export class NavkitContentComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onWindowResize(event: Event) {
     this.navkitService.sideNavWidth.pipe(take(1)).subscribe((width) => {
-      this.navkitService.toggleSidenav();
       if (width && window.innerWidth > 992) {
         this.width = `calc(100% - ${width}px)`;
         this.cdRef.detectChanges();
       } else {
+        this.navkitService.openSidenav.pipe(take(1)).subscribe((value) => {
+          if (value) {
+            this.navkitService.toggleSidenav();
+          }
+        });
+
         this.width = `100%`;
         this.cdRef.detectChanges();
       }

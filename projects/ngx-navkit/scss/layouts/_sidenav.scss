@@ -20,7 +20,10 @@
   .navkit-sidenav-inner {
     background-color: #ffffff;
     height: 100%;
-    z-index: 1;
+    .sidenav-items{
+      height: 100%;
+      padding: 10px;
+    }
   }
 
   &:has(.side) {
@@ -32,7 +35,58 @@
   }
 }
 
+.sidenav-btn-container{
+  display: none;
+  justify-content: end;
+  padding: 10px;
+}
+
+@mixin cross($size: 20px, $color: currentColor, $thickness: 1px) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: relative;
+  width: $size;
+  height: $size;
+  display: flex;  
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(($size - $thickness) / 2);
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
+  }
+
+}
+
+
+// Close button.
+.cross-stand-alone {
+  @include cross(30px, #000, 3px);  
+}
+
 @media (max-width:992px) {
+  .sidenav-btn-container{
+    display: flex;
+  }
   .navkit-sidenav {
     width: 100% !important;
 
@@ -42,7 +96,7 @@
     &:has(.side) {
       left: -100%;
       background-color: #00000000;
-      transition: left .3s ease .1s, background-color .3s;
+      transition: left .3s ease .2s, background-color .3s;
     }
 
     &:has(.over) {

@@ -17,7 +17,8 @@ export class NavkitSidenavComponent implements OnInit {
   @Input()
   width: number = 300;
 
-  @Input() navItems: NavItems[] = [];
+  // @Input() navItems: NavItems[] = [];
+
   sidenavOpen: boolean = true;
 
   constructor(protected navkitService: NgxNavkitService) {}

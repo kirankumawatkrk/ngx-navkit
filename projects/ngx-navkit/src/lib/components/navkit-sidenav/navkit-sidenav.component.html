@@ -3,6 +3,12 @@
   class="navkit-sidenav-inner"
   [ngClass]="(navkitService.openSidenav | async) ? 'over' : 'side'"
   [style.width.px]="width"
+  [style.maxWidth.px]="width"
 >
-  <ng-content></ng-content>
+  <div class="sidenav-btn-container" (click)="toggleSidenav()">
+    <span class="cross-stand-alone"></span>
+  </div>
+  <div class="sidenav-items">
+    <ng-content></ng-content>
+  </div>
 </div>
